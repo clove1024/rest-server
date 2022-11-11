@@ -1,0 +1,27 @@
+spring:
+  profiles: default
+  application:
+    name: account-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/data?serverTimezone=UTC&characterEncoding=UTF-8
+    username: atid
+    password: wjdgid0103
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+logging:
+  level:
+    org.hibernate.type: trace
+    org.apache.kafka: OFF
+    org.springframework.cloud: OFF
+server:
+  port: 8083
